@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <script>
+           //shallow copy
+           let arr1 = [1, 2, 3, 4];
+           let arr2 = arr1;
+           arr2[0] = 5;
+           console.log(arr1);
+           console.log(arr2);
+
+           //deep copy
+           let arr3 = [];
+           arr1.forEach((num, index) => {arr3[index] = num})
+           arr3[0] = 10;
+           console.log(arr1);
+           console.log(arr3);
+        </script>
+    </body>
+</html>
