@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <script>
+           //Adding Elements to an Array
+           let arr1 = ["is"];
+           arr1.push("Awesome"); //add element at end
+           arr1.unshift("JS"); //add element at start
+
+           console.log(arr1);
+
+           //with out using push and unshift
+           let arr2 = ["is"];
+           arr2[arr2.length] = "Awesome"; //push
+
+           for(let i = arr2.length; i>-1; i--) {
+               arr2[i] = arr2[i-1];
+           } 
+           arr2[0] = "JS"; // unshift
+           console.log(arr2);
+
+
+           //Removing elements from an array
+           let arr3 = ["The", "JS", "is", "super", "cool"];
+           var cool = arr3.pop();//remove element at end
+           var the = arr3.shift();//remove element at start
+
+           console.log(the, arr3, cool);
+
+           //without using pop and shift
+           let arr4 = ["The", "JS", "is", "super", "cool"];
+           delete arr4[arr4.length - 1]; //pop
+           
+           for(let j=0; j< arr4.length; j++) {
+               arr4[j] = arr4[j+1]; //shift
+           }
+
+           console.log(arr4);
+
+           //adding and removing elements from middle of array
+           let arr5 = ["JS", "is", "awkward"];
+           let awkward = arr5.splice(2, 1, "super", "cool");
+           console.log(arr5);
+
+           //Putting Array elements in order
+           let arr6 = ['f','g','r','d','b'];
+           arr6.sort();
+           console.log(arr6);
+
+           let arr7 = ["a", "az", "ab", "b", "z"];
+           arr7.sort();
+           console.log(arr7);
+
+           let arr8 = [4, 100, 58, 6];
+           arr8.sort();
+           console.log(arr8); //Doesn't work as expected. Converts to String and then sorts
+
+           arr8.sort((num1, num2) => num1-num2);
+           console.log(arr8); //Now it sorts as expected;
+
+           arr8.reverse();
+           console.log(arr8);
+        </script>
+    </body>
+</html>
