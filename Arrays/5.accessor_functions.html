@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <script>
+           //searching for a value
+           let x = [1, 2, 3, 4];
+           let searchElement = 3;
+           let pos = x.indexOf(searchElement);
+           if(pos > -1) {
+               console.log(pos, searchElement);
+           } else {
+               console.log("Not Found");
+           }
+
+           //Multiple occurences of same element
+           let y = [2, 4, 5, 2, 6, 3, 5, 2, 6];
+           let searchElement1 = 2;
+           let firstMatchingElementPosition = y.indexOf(searchElement1);
+           let lastMatchingElementPosition = y.lastIndexOf(searchElement1);
+           if(firstMatchingElementPosition > -1 ) {
+               console.log(searchElement1, firstMatchingElementPosition, lastMatchingElementPosition);
+           } else {
+               console.log("Not Found");
+           }
+
+           //String representation of Arrays
+           let z = ["JS", "is", "Awesome"];
+           console.log(z.toString()); // joins by ","
+           console.log(z.join());// joins by ","
+           console.log(z.join(""));// joins by nothing
+
+           //Creating new Arrays from existing arrays
+           let a1 = ["JS", "is"];
+           let a2 = ["awesome"];
+           let a3 = a1.concat(a2);
+           let a4 = [...a1, ...a2];
+           console.log(a3);
+           console.log(a4);
+
+           let a5 = a1.slice(0);
+           a5[2] = "Cool";
+           console.log(a5);
+           console.log(a1);
+
+           let a6 = a3.splice(2, 1, "Cool");
+           console.log(a3);
+           console.log(a6);
+        </script>
+    </body>
+</html>
