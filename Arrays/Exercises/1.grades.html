@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <p>1. Create a grades object that stores a set of student grades in an object. Provide a
+function for adding a grade and a function for displaying the student’s grade average.
+        </p>
+        <script>
+            function Grades() {
+                this.data = [];
+            }                
+            Grades.prototype.add = function(mark) {
+                this.data.push(mark);
+            }
+            Grades.prototype.average = function() {
+                let total = this.data.reduce((pre,next) => {
+                    pre = pre + next
+                    return pre;
+                }, 0);
+                return total/(this.data.length);
+            }
+
+            var grades1 = new Grades();
+            grades1.add(69);
+            grades1.add(59);
+            grades1.add(79);
+            grades1.add(89);
+            grades1.add(99);
+            console.log(grades1.average());
+        </script>
+    </body>
+</html>
