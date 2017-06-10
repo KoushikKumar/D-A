@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <script>
+           //1.2D Arrays
+           //a.create
+           var a = [[1,2,3],[4,5,6],[7,8,9]];
+           function matrix(rows, cols, initial) {
+               var res = [];
+               for(var i=0; i<rows; i++) {
+                   var columns = [];
+                   for(var j = 0; j<cols; j++) {
+                       columns[j] = initial;
+                   }
+                   res[i] = columns;
+               }
+               return res;
+           }
+           
+           //b.Processing : column wise
+           for(var row=0; row<a.length; row++) {
+               for(var col = 0 ; col<a[row].length; col++) {
+                   console.log(a[row][col]);
+               }
+           }
+           console.log("=======================");
+           //c. Processing : row wise
+           for(var col=0; col<a.length; col++) {
+               for(var row = 0; row< a[col].length; row++) {
+                   console.log(a[row][col]);
+               }
+           }
+           console.log("=======================");
+           //2. Jagged Arrays (column wise still works)
+           var b = [[1,2],[3],[4,5,6],[7,8],[6,7,8,9,4,5]];
+           for(var row=0; row<b.length; row++) {
+               for(var col = 0 ; col<b[row].length; col++) {
+                   console.log(b[row][col]);
+               }
+           }
+        </script>
+    </body>
+</html>
