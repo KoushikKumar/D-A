@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <script>
+           var a = {
+               "marks":[75,65,98,30],
+               "name":"Karthik"
+           }
+           function isPassed(person) {
+               return person["marks"].every(mark => mark>=35);
+           }
+           console.log(isPassed(a));
+        </script>
+    </body>
+</html>
